@@ -1,10 +1,8 @@
 import React from 'react'
-
-import { ExampleComponent } from 'datepicker-input-react'
-import 'datepicker-input-react/dist/index.css'
+import Input from './components/input/Input';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Input />
 }
 
-export default App
+export default App;
