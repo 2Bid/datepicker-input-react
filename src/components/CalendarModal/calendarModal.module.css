@@ -3,6 +3,8 @@
     position: absolute;
     top: 110%;
     border: 1px solid #b1b1b1;
+    z-index: 999;
+    background-color: #fff;
 }
 
 .calendarModal__tableBody{
