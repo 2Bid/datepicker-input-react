@@ -17,30 +17,23 @@ export default function Input(props) {
   }
 
   return (
-    <div
-      className={styles.App}
-      onClick={(e) => {
-        if (e.target.className === 'App') setIsOpen(false)
-      }}
-    >
-      <div className={styles.input__container}>
-        <input
+    <div className={styles.input__container}>
+      <input
+        value={selectDate}
+        onClick={() => {
+          setIsOpen(true)
+        }}
+      />
+      {isOpen ? (
+        <CalendarModal
+          onSelect={handleDateSelect}
+          close={closeCalendar}
           value={selectDate}
-          onClick={() => {
-            setIsOpen(true)
-          }}
+          home={props.home}
         />
-        {isOpen ? (
-          <CalendarModal
-            onSelect={handleDateSelect}
-            close={closeCalendar}
-            value={selectDate}
-            home={props.home}
-          />
-        ) : (
-          <Fragment/>
-        )}
-      </div>
+      ) : (
+        <Fragment/>
+      )}
     </div>
   )
 }
