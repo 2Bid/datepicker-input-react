@@ -1,12 +1,11 @@
 .calendarModal{
-    max-height: 325px;
     width: 325px;;
     position: absolute;
     top: 110%;
     border: 1px solid #b1b1b1;
 }
 
-.calendarModal__table-body{
+.calendarModal__tableBody{
     margin: 10px;
 }
 
@@ -17,7 +16,7 @@
     border-bottom: 1px solid #b1b1b1;
 }
 
-.calendarModal__nav--nav{
+.calendarModal__navNav{
     cursor: pointer;
     width: 0px;
     height: 0px;
@@ -25,23 +24,23 @@
     border-width: 10px;
 }
 
-.calendarModal__day--head{
+.calendarModal__dayHead{
     padding: 5px;
     color: #4d4d4d;
     background-color: #eeeeee;
 }
 
-.calendarModal__day--next,
-.calendarModal__day--prev{
+.calendarModal__dayNext,
+.calendarModal__dayPrev{
     color: #b1b1b1;
     background-color: #f9f9f9;
 }
 
-.calendarModal__nav--prev{
+.calendarModal__navPrev{
     border-color: transparent #353535 transparent  transparent ;
 }
 
-.calendarModal__nav--next{
+.calendarModal__navNext{
     border-color: transparent transparent  transparent #353535;
 }
 
