@@ -21,6 +21,7 @@ export default function Input(props) {
     <div className={styles.input__container}>
       <input
         value={selectDate}
+        readOnly
         onClick={() => {
           setIsOpen(true)
         }}

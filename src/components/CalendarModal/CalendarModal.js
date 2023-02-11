@@ -81,9 +81,11 @@ export default function CalendarModal(props) {
   // update array day of the next month
   useEffect(() => {
     if (loadNextDays !== 0) {
+      const emptyArray = []
       for (let i = 1; i < nextDaysMonth + 1; i++) {
-        setArrayNextDays([...arrayNextDays, arrayNextDays.push(i)])
+        emptyArray.push(i)
       }
+      setArrayNextDays(emptyArray)
     }
   }, [nextDaysMonth, loadNextDays])
 
