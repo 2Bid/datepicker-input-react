@@ -7,6 +7,6 @@ import Homelogo from 'home.png'
 
 export default class DatepickerComponent extends Component {
   render() {
-    return <Input home={Homelogo}/>
+    return <Input onChange={this.props.onChange} home={Homelogo}/>
   }
 }

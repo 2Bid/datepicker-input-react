@@ -151,6 +151,7 @@ export default function CalendarModal(props) {
         <select
           className={styles.calendarModal__navMonth}
           onChange={(e) => goToSelectMonth(e)}
+          value={allMonth[indexMonth - 1]}
         >
           {allMonth.map((month, index) => {
             return (
@@ -158,7 +159,6 @@ export default function CalendarModal(props) {
                 key={index}
                 data-index={index}
                 value={month}
-                selected={index === indexMonth - 1}
               >
                 {month}
               </option>
@@ -169,10 +169,11 @@ export default function CalendarModal(props) {
         <select
           className={styles.calendarModal__navYear}
           onChange={(e) => goToSelectYear(e)}
+          value={currentYear}
         >
           {allYears.map((year, index) => {
             return (
-              <option key={index} value={year} selected={year === currentYear}>
+              <option key={index} value={year}>
                 {year}
               </option>
             )

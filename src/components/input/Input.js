@@ -10,6 +10,7 @@ export default function Input(props) {
 
   const handleDateSelect = (date) => {
     setSelectDate(date)
+    props.onChange(date)
   }
 
   const closeCalendar = () => {
@@ -27,6 +28,7 @@ export default function Input(props) {
       {isOpen ? (
         <CalendarModal
           onSelect={handleDateSelect}
+          onChange={(e)=>props.onChange(e)}
           close={closeCalendar}
           value={selectDate}
           home={props.home}
