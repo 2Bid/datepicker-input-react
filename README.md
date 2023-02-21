@@ -1,29 +1,36 @@
 # datepicker-input-react
 
-> Made with create-react-library
+Datepicker-input-react is a library based on create-react-library.
+This library return an input field who display a calendar when the input field is clicked, and return the selected date into input field.
 
-[![NPM](https://img.shields.io/npm/v/datepicker-input-react.svg)](https://www.npmjs.com/package/datepicker-input-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+Features include:
+- Displays days of previous and next month
+- Got a home button to reset date
+- Extends to 50 years before and after actual year
 
 ## Install
 
 ```bash
-npm install --save datepicker-input-react
+npm i datepicker-input-react
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'datepicker-input-react'
+import React from 'react'
+import DatepickerInput from 'datepicker-input-react'
 import 'datepicker-input-react/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+export default function DatepickerInputContainer({onChange}) {
+  return (
+    <DatepickerInput onChange={onChange}/>
+  )
 }
 ```
+
+## Props
+
+```onChange``` subscribe to date change
 
 ## License
 
