@@ -3,7 +3,10 @@ import React from 'react'
 import DatepickerComponent from 'datepicker-input-react'
 
 const App = () => {
-  return <DatepickerComponent />
-}
+  const onChange = (e) => {
+    console.log(e)
+  }
 
+  return <DatepickerComponent onChange={(e)=>onChange(e)}/>
+}
 export default App

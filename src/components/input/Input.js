@@ -29,10 +29,11 @@ export default function Input(props) {
       {isOpen ? (
         <CalendarModal
           onSelect={handleDateSelect}
-          onChange={(e)=>props.onChange(e)}
           close={closeCalendar}
           value={selectDate}
           home={props.home}
+          // props library function
+          onChange={(e)=>props.onChange(e)}
         />
       ) : (
         <Fragment/>
