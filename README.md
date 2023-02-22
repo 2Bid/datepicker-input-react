@@ -21,16 +21,21 @@ import React from 'react'
 import DatepickerInput from 'datepicker-input-react'
 import 'datepicker-input-react/dist/index.css'
 
-export default function DatepickerInputContainer({onChange}) {
+export default function DatepickerInputContainer() {
+
+  const onChange = (e) => {
+    console.log(e)
+  }
+  
   return (
-    <DatepickerInput onChange={onChange}/>
+    <DatepickerInput onChange={(e)=>onChange(e)}/>
   )
 }
 ```
 
 ## Props
 
-```onChange``` subscribe to date change
+```onChange``` subscribe to date change ( *required* )
 
 ## License
 
